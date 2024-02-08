@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* top bar styling start */
+.top_bar{
+background-color:rgba(6, 187, 6, 0.76);
+color: rgb(243, 235, 235);
+padding: 10px 0;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+.top_bar .container{
+    display: flex;
+    justify-content: space-between;
+}
+.top_bar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.top_bar i{
+    font-size: 30px;
+}
+@media  screen and (max-width: 677px) { 
+    .top_bar{
+     display: none;
+        }   
+}
+/* top bar end */
+/* header section start */
+.header_section {
+    padding: 10px 0px;
+ /*box-shadow: rgba(28, 28, 126, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;*/
+   background-color:rgb(117, 104, 236);
+    color:black;
+}
+.header_section .logo h2{
+   /* font-variant: small-caps;*/
+    /* font-style: italic; */
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}       
+.header_section .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_section ul{
+    list-style: none;
+    display: flex;     /*flex=>changes column into row*/
+    gap: 10px;
+}
+
+.header_section  ul li{
+    padding: 5px 2px;
+    /* background-color: white; */
+    /* display: flex; */
+    text-transform: uppercase;
+}
+.header_section ul li:hover{
+   background-color: rgba(28, 28, 126, 0.15);
+   color: white;
+  /*  border-bottom: 1px solid red;*/
+    cursor: pointer;
+}
+.nav_link{
+    position: relative;
+}
+.header_section .dropdown{
+    background-color: red;
+    color: black;
+    display: none;  /* this hide the display*/
+   padding: 10px;
+    margin-left: -20px;
+    position: absolute; 
+    width: 170px;
+    top: 29px;
+   z-index: 1000;  /*different index lai show grxa*/
+}
+.header_section .dropdown{
+font-size: 14px;
+font-family: 'Times New Roman', Times, serif;
+}
+.nav_link:hover .dropdown{  /*indicate the icon by giving different color*/
+    display: block;
+}
+.menu_bar {
+display: none;
+}
+.menu_bar i {
+  font-size: 25px;
+  cursor: pointer;  
+}
+@media screen and (max-width: 1072px) {
+   .container {
+    width: 95%;
+   } 
+}
+@media screen and (max-width:950px) {
+ .nav_element ul {
+    display: none;
+ }   
+ .menu_bar {
+    display: block;
+ }
+}
+@media screen and (max-width:690px) {
+    .header_section {
+        background-color: black;
+        color: white;
+    }
+}
+/*header section styling end*/
+/* hero section styling start */
+.hero_section {
+background-color: grey;
+color:whitesmoke;
+position: relative;
+
+}
+.hero_section .overlay{
+    height: 1000px;
+    width: 100%;
+    background:url("background-tree-book-wallpaper-preview.jpg")no-repeat;
+    background-size: cover;
+    background-size: center;
+    
+  opacity: 0.9;
+     
+}
+.hero_section_content{
+    position: absolute;
+    top:25%;
+    left: 10%;
+}
+
+.hero_section_content p {
+    font-size: 18px;
+    font-style: italic;
+    padding: 20px 0;
+    color:dark rgb(240, 240, 17);
+}
+.hero_section_content button {
+    border: none;
+    background-color:darkgoldenrod;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: blue;
+}
+@media screen and (max-width:551px) {
+    .hero_section .overlay{
+      height: 500px;
+    }
+.hero_section_content {
+    top: 15%;
+    left: 5%;
+}
+.hero_section_content p {
+    font-size: 16px;
+}
+}
+/* hero section styling end */
+/* course highlight section start */
+.course_highlights {
+    position: relative;
+    top: -50px;
+ }
+ .course_highlights .container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /*qdjust the frame*/
+    row-gap: 30px;
+
+ }
+
+.course_card {
+    width: 325px;  /*for box shadow goto beautiful box shadow site*/
+    box-shadow: rgb(56, 128, 190) 3px 3px 6px 0px inset, rgb(15, 15, 15) -3px -3px 6px 1px inset;
+}
+.course_card h4 {
+    background-color:black;
+    color:white;
+    text-align: center;
+    padding: 20px 0px;
+     }
+     .course_card p {
+     padding: 15px; 
+     }
+     .course_card button {
+        border: none;
+        margin: 5px 15px 15px 15px;
+        padding: 5px 10px;
+        background-color:black;
+        color: white;
+        cursor: pointer;
+     }
+     /* @media screen and (max-width:959px) {
+        
+     } */
+     
+    
+     
+    
+/* highlight section end */
+/* popular course start */
+.popular_course {
+    padding: 50px;
+   /* margin-top: -30px;*/
+}
+.popular_course .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.head {
+    text-align: center;
+    padding: 30px;
+}
+.head h2 {
+    font-size: 40px;
+    color: brown;
+}
+
+.head h2 ::before {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: purple;
+    display: block;
+    margin: 20px auto;
+}
+.popular_course .course_card img {
+    width: 100%;
+    height: 70%;
+}
+.popular_course .course_card h5 {
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+.popular_course .course_card p {
+    font-style: itallic;
+    margin-top: -20px;
+}
+
+/* author start */
+.author {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: white;
+padding-left: 20px;
+}
+.author .author_img {
+    margin-top: 5px;
+}
+.author .author_img img {
+    height: 50px;
+    width: 50px;
+    border: radius 50%;
+}
+.author_name .name {
+    font-size: 15px;
+    font-weight: 550;
+  /*  margin-bottom: -20px;*/
+  padding-top: 30px;
+}
+.author_name .name span {
+    color:rgb(160, 27, 27);
+}
+.price {
+    background-color:black;
+    color:white;
+    /* height: 53px; */
+    padding-top: 15px;
+}
+.price p {
+    font-size: 20px;
+    font-weight: 550;
+}
+/* popular course styling end */
+/* mid section styling start */
+.mid_section {
+    background-color: blue;
+    color: white;
+    padding: 100px;
+    margin-top: 70px;
+}
+.mid_section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+.mid_section .button button {
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.mid_section .button button:hover {
+    background-color: transparent;
+    color:white;
+}
+/* mid section styling start */
+/*testimony  section start */
+.testimonial_section {
+   /* margin-top: 20px;*/
+    text-align: center;
+    background: url("./ai/background\ img.jpeg") no-repeat;
+    background-size:cover;
+    padding: 200px 0 30px 0;
+    color: azure;
+    
+}
+.testimonial_section h2 {
+    color: white;
+}
+.testimonial_section h2::before {
+    background-color: white;
+}
+.testimonial_card .testi_image img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.testimonial_card p {
+    font-size: 18px;
+    padding: 20px;
+    font-style: italic;
+    
+}
+.testimonial_card p i {
+    font-size: 35px;
+}
+.name_and_position h4 {
+    font-size: 27px;
+}
+/* testimony section end */
+/* footer sectiokn start */
+.footer_section {
+    background-color: lightblue;
+    color-scheme: white;
+    padding: 40px 0;
+}
+.footer_section .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+.footer_link h4 {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.footer_section ul {
+    list-style: none;
+}
+.footer_section ul li {
+    padding: 3px 0;
+}
+.footer_section .social_icons {
+    padding-bottom: 10px;
+}
+.footer_section .social_icons ul {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding-top: ;
+}
+.footer_section .social_icons li {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+.footer_section .social_icons li i {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.footer_section p {
+text-align: center;
+width: 85%;
+margin: auto;
+margin-top: 40px;
+border-top: 2px solid rgb(36, 26, 26);
+padding-top: 40px;
+}
+/* footer end */
